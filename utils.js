@@ -69,3 +69,29 @@ export function decreaseOutputHeight() {
     `${parseInt(currentFontSize) - 20}px`,
   )
 }
+
+export function each(list, callback) {
+  const inputList = []
+  const resultList = []
+  const inputType = typeof list === "string" ? "string" : "list"
+  if (inputType === "string") {
+    inputList.push(...list.split(""))
+  } else {
+    inputList.push(...list)
+  }
+  if (callback == null) {
+    if (inputType === "string") return inputList.join("")
+    return inputList
+  }
+
+  // inputList.forEach((e) => {
+  //   const res = callback(e)
+  //   resultList.push(res)
+  // })
+  for (let e of inputList) {
+    const res = callback(e)
+    resultList.push(res)
+  }
+  if (inputType === "string") return resultList.join("")
+  return resultList
+}
