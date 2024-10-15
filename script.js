@@ -1,4 +1,6 @@
-export function aufgabe01(args) {
+import { linkupExerciseHandler } from "./utils"
+
+function aufgabe01(args) {
   const input = args
   const result = []
 
@@ -9,3 +11,5 @@ export function aufgabe01(args) {
   }
   return result.join("")
 }
+
+linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)

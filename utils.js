@@ -95,3 +95,8 @@ function linkupHandler(selector, cb) {
   const elem = document.querySelector(selector)
   elem.addEventListener("click", cb)
 }
+
+export function linkupExerciseHandler(selector, cb) {
+  const elem = document.querySelector(selector)
+  elem.addEventListener("click", () => $(cb))
+}
