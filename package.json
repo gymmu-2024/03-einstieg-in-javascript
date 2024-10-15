@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "test": "mocha tests/node.test.js",
+    "test": "vitest",
     "test-address": "mocha tests/node.test.js address",
     "test-report": "mocha --reporter json tests/node.test.js > test-report.json",
     "lint": "prettier --check .",
@@ -31,6 +31,7 @@
   "dependencies": {
     "chai": "^4.3.10",
     "mocha": "^10.0.0",
-    "vite": "^5.2.6"
+    "vite": "^5.2.6",
+    "vitest": "^2.1.3"
   }
 }

@@ -1,5 +1,6 @@
-import "https://unpkg.com/mocha/mocha.js"
-import "https://unpkg.com/chai/chai.js"
+import * as mocha from "mocha"
+
+console.log(mocha)
 
 mocha.setup("bdd")
 
