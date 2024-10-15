@@ -39,6 +39,15 @@
 		],
 		"description": "A javascript function."
 	},
+	"[gymmu] Linkup function handler": {
+		"scope": "javascript",
+		"prefix": "linkup",
+		"body": [
+			"linkupExerciseHandler('[data-click=${1:aufgabe01}]', ${1})",
+		],
+		"description": "A javascript function."
+	},
+	
 	"[gymmu] Button mit einer Funktion": {
 		"scope": "html",
 		"prefix": "btn",
