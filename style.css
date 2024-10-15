@@ -5,17 +5,14 @@
 }
 
 :root {
-  --output-height: 20vh;
+  --output-height: 50vh;
   --output-header-height: 40px;
   --output-font-size: 20pt;
   --bg-color: #222;
   --fg-color: #fff;
-  --header-height: 80px;
-  --input-panel-height: 30vh;
-  --mocha-height: calc(
-    100vh - var(--input-panel-height) - var(--header-height) -
-      var(--output-height)
-  );
+  --header-height: 0;
+  --input-panel-height: 50vh;
+  --mocha-height: 0;
 }
 
 body {
@@ -26,23 +23,6 @@ body {
   background-color: var(--bg-color);
   color: var(--fg-color);
   overflow-y: hidden;
-}
-
-body::after {
-  position: fixed;
-  height: calc(var(--header-height) - 10px);
-  top: 0;
-  left: 0;
-  width: 100%;
-  content: "Tests:";
-  z-index: 0;
-  background-color: var(--bg-color);
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border-bottom: 2px solid whitesmoke;
 }
 
 #input-panel {

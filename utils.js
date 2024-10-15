@@ -37,7 +37,7 @@ export function $(callback) {
   print(result)
 }
 
-export function increaseFontSize() {
+function increaseFontSize() {
   const cssRoot = document.querySelector(":root")
   const rootStyles = getComputedStyle(cssRoot)
   let currentFontSize = rootStyles.getPropertyValue("--output-font-size")
@@ -47,8 +47,9 @@ export function increaseFontSize() {
     `${parseInt(currentFontSize) + 2}pt`,
   )
 }
+linkupHandler("[data-click='increaseFontSize']", increaseFontSize)
 
-export function decreaseFontSize() {
+function decreaseFontSize() {
   const cssRoot = document.querySelector(":root")
   const rootStyles = getComputedStyle(cssRoot)
   let currentFontSize = rootStyles.getPropertyValue("--output-font-size")
@@ -58,8 +59,9 @@ export function decreaseFontSize() {
     `${parseInt(currentFontSize) - 2}pt`,
   )
 }
+linkupHandler("[data-click='decreaseFontSize']", decreaseFontSize)
 
-export function decreaseOutputHeight() {
+function decreaseOutputHeight() {
   const cssRoot = document.querySelector(":root")
   const rootStyles = getComputedStyle(cssRoot)
   let currentFontSize = rootStyles.getPropertyValue("--output-height")
@@ -69,8 +71,9 @@ export function decreaseOutputHeight() {
     `${parseInt(currentFontSize) - 2}vh`,
   )
 }
+linkupHandler("[data-click='decreaseOutputHeight']", decreaseOutputHeight)
 
-export function increaseOutputHeight() {
+function increaseOutputHeight() {
   const cssRoot = document.querySelector(":root")
   const rootStyles = getComputedStyle(cssRoot)
   let currentFontSize = rootStyles.getPropertyValue("--output-height")
@@ -80,16 +83,15 @@ export function increaseOutputHeight() {
     `${parseInt(currentFontSize) + 2}vh`,
   )
 }
+linkupHandler("[data-click='increaseOutputHeight']", increaseOutputHeight)
 
-export function clearConsole() {
+function clearConsole() {
   const consoleElement = document.querySelector("#output-content")
-  consoleElement.textContent = ">"
+  consoleElement.textContent = ">>>"
 }
+linkupHandler("[data-click='clearConsole']", clearConsole)
 
-function linkupHandlers() {
-  document
-    .querySelector("[data-click='clearConsole']")
-    .addEventListener("click", clearConsole)
+function linkupHandler(selector, cb) {
+  const elem = document.querySelector(selector)
+  elem.addEventListener("click", cb)
 }
-
-linkupHandlers()
