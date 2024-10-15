@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>Programmieren mit Javascript</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
     <link href="style.css" rel="stylesheet" />
-    <script src="helper.js" type="module"></script>
+    <script type="module" src="utils.js"></script>
+    <script type="module" src="script.js"></script>
   </head>
 
   <body>
@@ -22,27 +22,21 @@
 
       <div class="button-container">
         <!-- TODO: Hier neue Buttons erstellen. -->
-        <button type="button" onclick="$(aufgabe01)">Aufgabe 1</button>
+        <button type="button" data-click="aufgabe01">Aufgabe 1</button>
       </div>
-    </div>
-
-    <div id="mocha">
-      <h3>Tests</h3>
     </div>
 
     <div id="output">
       <div id="output-header">
         <div class="ctrl-buttons">
-          <span class="btn" onclick="clearConsole()">&#x1f5d1;</span>
-          <span class="btn" onclick="increaseFontSize()">+</span>
-          <span class="btn" onclick="decreaseFontSize()">-</span>
-          <span class="btn" onclick="increaseOutputHeight()">&#x21A5;</span>
-          <span class="btn" onclick="decreaseOutputHeight()">&#x21A7;</span>
+          <span class="btn" data-click="clearConsole">&#x1f5d1;</span>
+          <span class="btn" data-click="increaseFontSize">+</span>
+          <span class="btn" data-click="decreaseFontSize">-</span>
+          <span class="btn" data-click="increaseOutputHeight">&#x21A5;</span>
+          <span class="btn" data-click="decreaseOutputHeight">&#x21A7;</span>
         </div>
       </div>
       <div id="output-content">></div>
     </div>
-
-    <script type="module" src="tests/run.js"></script>
   </body>
 </html>

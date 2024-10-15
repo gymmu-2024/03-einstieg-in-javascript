@@ -1,6 +1,26 @@
-# Easycode
+# Einstieg ins Programmieren mit Javascript
 
-Einfaches Repository um Javascript zu lernen.
+Dieses Projekt bietet viele Aufgaben mit automatischen Tests, bei denen Sie das
+Programmieren mit Javascript erlernen können. Es gibt 2 Befehle die Sie im
+Terminal ausführen sollen, damit Sie einmal Zugriff zur Webseite haben, und zum
+anderen Zugriff zu den Tests.
+
+Für die Webseite brauchen Sie den folgenden Befehl:
+
+```bash
+npm run dev
+```
+
+Für die Tests starten Sie ein zweites Terminal, mit folgendem Befehl:
+
+```bash
+npm run test
+```
+
+Hier finden Sie ein Video dazu, das Ihnen alles wichtige erklärt.
+
+[![Projekt
+einrichten](https://img.youtube.com/vi/e_Hr8u-CLYY/0.jpg)](https://www.youtube.com/watch?v=e_Hr8u-CLYY)
 
 ## Aufgabe 01
 
