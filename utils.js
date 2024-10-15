@@ -85,3 +85,11 @@ export function clearConsole() {
   const consoleElement = document.querySelector("#output-content")
   consoleElement.textContent = ">"
 }
+
+function linkupHandlers() {
+  document
+    .querySelector("[data-click='clearConsole']")
+    .addEventListener("click", clearConsole)
+}
+
+linkupHandlers()

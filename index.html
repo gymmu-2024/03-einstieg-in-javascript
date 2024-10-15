@@ -4,9 +4,8 @@
     <title></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
     <link href="style.css" rel="stylesheet" />
-    <!-- <script src="helper.js" type="module"></script> -->
+    <script type="module" src="utils.js"></script>
   </head>
 
   <body>
@@ -26,14 +25,10 @@
       </div>
     </div>
 
-    <div id="mocha">
-      <h3>Tests</h3>
-    </div>
-
     <div id="output">
       <div id="output-header">
         <div class="ctrl-buttons">
-          <span class="btn" onclick="clearConsole()">&#x1f5d1;</span>
+          <span class="btn" data-click="clearConsole">&#x1f5d1;</span>
           <span class="btn" onclick="increaseFontSize()">+</span>
           <span class="btn" onclick="decreaseFontSize()">-</span>
           <span class="btn" onclick="increaseOutputHeight()">&#x21A5;</span>
@@ -42,7 +37,5 @@
       </div>
       <div id="output-content">></div>
     </div>
-
-    <script type="module" src="tests/run.js"></script>
   </body>
 </html>
