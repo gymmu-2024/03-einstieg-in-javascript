@@ -19,8 +19,13 @@ npm run test
 
 Hier finden Sie ein Video dazu, das Ihnen alles wichtige erklärt.
 
-[![Projekt
-einrichten](https://img.youtube.com/vi/e_Hr8u-CLYY/0.jpg)](https://www.youtube.com/watch?v=e_Hr8u-CLYY)
+[![Einstieg Javascript](https://img.youtube.com/vi/1Aux3HgbUkc/0.jpg)](https://youtu.be/1Aux3HgbUkc)
+
+## Wo müssen Dinge geändert werden?
+
+Die einzigen beiden Datein die Sie eigentlich brauchen, sind die Datei
+`index.html`, wo Sie neue Buttons für weitere Aufgaben hinzufügen, und
+`script.js`, dort kommen all Ihre Aufgaben rein.
 
 ## Aufgabe 01
 

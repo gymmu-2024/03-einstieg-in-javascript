@@ -22,7 +22,7 @@
 		"prefix": "qs",
 		"body": [
 			"const ${1:id}Element = document.querySelector(\"#${1}\")",
-			"${0}" 
+			"${0}"
 		],
 		"description": "Hole ein Element aus der Webseite mit einer ID"
 	},
@@ -47,12 +47,12 @@
 		],
 		"description": "A javascript function."
 	},
-	
+
 	"[gymmu] Button mit einer Funktion": {
 		"scope": "html",
 		"prefix": "btn",
 		"body": [
-			"<button onclick=\"$(${1:functionName})\">${2:Button text}</button>"
+			"<button type='button' data-click=\"${1:functionName}\">${2:Button text}</button>"
 		],
 		"description": "Erstellt einen Button mit einer onclick Funktion."
 	},
@@ -119,5 +119,5 @@
 		],
 		"description": "Erstellt eine Gruppe von Tests für eine Aufgabe."
 	},
-	
+
 }
