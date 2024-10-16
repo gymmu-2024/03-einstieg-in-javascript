@@ -13,5 +13,5 @@ export default defineConfig({
     testIdAttribute: "id",
   },
 
-  base: "/easycode/",
+  base: "/03-einstieg-in-javascript/",
 })
