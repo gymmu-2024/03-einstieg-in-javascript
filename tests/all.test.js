@@ -181,7 +181,7 @@ describe("Aufgabe 07", function () {
   })
   test("Sollte 'Und' nicht erkennen wenn es nicht am Satzanfang ist", function () {
     const input = "Hier ist ein falsches Und."
-    const res = funcs.function07(input)
+    const res = funcs.aufgabe07(input)
     assert.equal(res, false)
   })
 })
