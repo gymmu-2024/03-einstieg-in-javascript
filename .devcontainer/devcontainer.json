@@ -3,17 +3,10 @@
 {
   "name": "Node.js",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces",
 
-  // Features to add to the dev container. More info: https://containers.dev/features.
-  // "features": {},
-
-  // Das ist der Standardport, der von vite genutzt wird. Wir leiten diesen
-  // weiter, damit wir die Webseite von aussen zugreifen können.
-  "forwardPorts": [5173],
-
-  // Hier können wir Änderungen an der Standart-Konfiguration von VSCode
-  // vornehmen und benötigte Erweiterungen installieren lassen.
   "customizations": {
     "vscode": {
       "settings": {
@@ -22,10 +15,7 @@
       },
       "extensions": [
         "mhutchie.git-graph",
-        "esbenp.prettier-vscode",
-        "SimonSiefke.svg-preview",
-        "sidthesloth.svg-snippets",
-        "WallabyJs.quokka-vscode"
+        "esbenp.prettier-vscode"
       ]
     }
   },
