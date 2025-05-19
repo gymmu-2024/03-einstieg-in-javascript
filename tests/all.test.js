@@ -3,206 +3,206 @@ import * as funcs from "../script.js"
 
 describe("Aufgabe 01", function () {
   test("Die Funktion 'aufgabe01()' soll existieren", function () {
-    assert.equal(typeof funcs.aufgabe01, "function")
+    expect(typeof funcs.aufgabe01).toBe("function")
   })
   test("Sollte keine 'e's mehr drin haben", function () {
     const input = "Hello"
     const res = funcs.aufgabe01(input)
-    assert.equal(res, "Hllo")
+    expect(res).toBe("Hllo")
   })
   test("Sollte keine 'E's mehr drin haben", function () {
     const input = "Emoji"
     const res = funcs.aufgabe01(input)
-    assert.equal(res, "moji")
+    expect(res).toBe("moji")
   })
   test("Sollte mehrere 'e's löschen", function () {
     const input = "Hier hat es mehrere 'e's drin."
     const res = funcs.aufgabe01(input)
-    assert.equal(res, "Hir hat s mhrr ''s drin.")
+    expect(res).toBe("Hir hat s mhrr ''s drin.")
   })
 })
 
 describe("Aufgabe 02", function () {
   test("Die Funktion 'aufgabe02()' soll existieren", function () {
-    assert.equal(typeof funcs.aufgabe02, "function")
+    expect(typeof funcs.aufgabe02).toBe("function")
   })
   test("Sollte nur noch Grossbuchstaben enthalten", function () {
     const input = "a"
     const res = funcs.aufgabe02(input)
-    assert.equal(res, "A")
+    expect(res).toBe("A")
   })
   test("Sollte mehrere Buchstaben gross schreiben", function () {
     const input = "abc"
     const res = funcs.aufgabe02(input)
-    assert.equal(res, "ABC")
+    expect(res).toBe("ABC")
   })
   test("Sollten Grossbuchstaben bleiben", function () {
     const input = "aBc"
     const res = funcs.aufgabe02(input)
-    assert.equal(res, "ABC")
+    expect(res).toBe("ABC")
   })
   test("Kann auch mit Sonderzeichen umgehen", function () {
     const input = "Hier ist ein Satz mit mehreren Zeichen."
     const res = funcs.aufgabe02(input)
-    assert.equal(res, "HIER IST EIN SATZ MIT MEHREREN ZEICHEN.")
+    expect(res).toBe("HIER IST EIN SATZ MIT MEHREREN ZEICHEN.")
   })
 })
 
 describe("Aufgabe 03", function () {
   test("Die Funktion 'aufgabe03()' soll existieren", function () {
-    assert.equal(typeof funcs.aufgabe03, "function")
+    expect(typeof funcs.aufgabe03).toBe("function")
   })
   test("Sollte 1 'e' enthalten", function () {
     const input = "Hello"
     const res = funcs.aufgabe03(input)
-    assert.equal(res, 1)
+    expect(res).toBe(1)
   })
   test("Sollte 4 'e's enthalten", function () {
     const input = "ein einfacher Text."
     const res = funcs.aufgabe03(input)
-    assert.equal(res, 4)
+    expect(res).toBe(4)
   })
   test("Sollte auch 'E's zählen", function () {
     const input = "Ein einfacher Text."
     const res = funcs.aufgabe03(input)
-    assert.equal(res, 4)
+    expect(res).toBe(4)
   })
 })
 
 describe("Aufgabe 04", function () {
   test("Die Funktion 'aufgabe04()' soll existieren", function () {
-    assert.equal(typeof funcs.aufgabe04, "function")
+    expect(typeof funcs.aufgabe04).toBe("function")
   })
   test("Sollte 2 Wörter zählen", function () {
     const input = "Zwei Wörter"
     const res = funcs.aufgabe04(input)
-    assert.equal(res, 2)
+    expect(res).toBe(2)
   })
   test("Sollte 4 Wörter zählen", function () {
     const input = "Nur vier Wörter hier."
     const res = funcs.aufgabe04(input)
-    assert.equal(res, 4)
+    expect(res).toBe(4)
   })
   test("Kann auch mit Sonderzeichen umgehen", function () {
     const input =
       "Nicht alles - was von Leerzeichen getrennt wird, sind Wörter..."
     const res = funcs.aufgabe04(input)
-    assert.equal(res, 9)
+    expect(res).toBe(9)
   })
   test("Zählt auch Zahlen als Wörter", function () {
     const input = "Nur vier Wörter hier."
     const res = funcs.aufgabe04(input)
-    assert.equal(res, 4)
+    expect(res).toBe(4)
   })
 })
 describe("Aufgabe 05", function () {
   test("Die Funktion 'aufgabe05()' soll existieren", function () {
-    assert.equal(typeof funcs.aufgabe05, "function")
+    expect(typeof funcs.aufgabe05).toBe("function")
   })
   test("Sollte keine Grossbuchstaben enthalten", function () {
     const input = "hier ist alles klein...."
     const res = funcs.aufgabe05(input)
-    assert.equal(res, false)
+    expect(res).toBe(false)
   })
   test("Sollte genau ein Grossbuchstabe erkennen", function () {
     const input = "Hier ist nur der anfang gross!"
     const res = funcs.aufgabe05(input)
-    assert.equal(res, true)
+    expect(res).toBe(true)
   })
   test("Sollte auch mehrere Grossbuchstaben erkennen", function () {
     const input = "Hier ist mehr wie nur der Anfang gross."
     const res = funcs.aufgabe05(input)
-    assert.equal(res, true)
+    expect(res).toBe(true)
   })
   test("Sollte auch gehen wenn nicht der erste Buchstabe gross ist", function () {
     const input = "abcdEEEfg"
     const res = funcs.aufgabe05(input)
-    assert.equal(res, true)
+    expect(res).toBe(true)
   })
   test("Sollte bei nur Sonderzeichen 'falsch' sein", function () {
     const input = "1 + 2 - 4 = -1"
     const res = funcs.aufgabe05(input)
-    assert.equal(res, false)
+    expect(res).toBe(false)
   })
   test("Sollte 'falsch' sein für den leeren String", function () {
     const input = ""
     const res = funcs.aufgabe05(input)
-    assert.equal(res, false)
+    expect(res).toBe(false)
   })
 })
 describe("Aufgabe 06", function () {
   test("Die Funktion 'aufgabe06()' soll existieren", function () {
-    assert.equal(typeof funcs.aufgabe06, "function")
+    expect(typeof funcs.aufgabe06).toBe("function")
   })
   test("Sollte keine Sonderzeichen enthalten", function () {
     const input = "abc"
     const res = funcs.aufgabe06(input)
-    assert.equal(res, false)
+    expect(res).toBe(false)
   })
   test("Das Leerzeichen wird nicht als Sonderzeichen erkannt", function () {
     const input = "Ohne Sonderzeichen"
     const res = funcs.aufgabe06(input)
-    assert.equal(res, false)
+    expect(res).toBe(false)
   })
   test("Punkte sind Sonderzeichen", function () {
     const input = "Hier gibt es ein Sonderzeichen."
     const res = funcs.aufgabe06(input)
-    assert.equal(res, true)
+    expect(res).toBe(true)
   })
   test("Sollte den leeren String nicht als Sonderzeichen erkennen", function () {
     const input = ""
     const res = funcs.aufgabe06(input)
-    assert.equal(res, false)
+    expect(res).toBe(false)
   })
   test("Sollte Sonderzeichen mitten im Text erkennen", function () {
     const input = "Hey! Hier sind mehr wie ein Sonderzeichen."
     const res = funcs.aufgabe06(input)
-    assert.equal(res, true)
+    expect(res).toBe(true)
   })
 })
 describe("Aufgabe 07", function () {
   test("Die Funktion 'aufgabe07()' soll existieren", function () {
-    assert.equal(typeof funcs.aufgabe07, "function")
+    expect(typeof funcs.aufgabe07).toBe("function")
   })
   test("Sollte das Wort 'und' nicht enthalten", function () {
     const input = "and"
     const res = funcs.aufgabe07(input)
-    assert.equal(res, false)
+    expect(res).toBe(false)
   })
   test("Sollte das Wort 'und' erkennen", function () {
     const input = "und"
     const res = funcs.aufgabe07(input)
-    assert.equal(res, true)
+    expect(res).toBe(true)
   })
   test("Sollte 'Und' am Satzanfang finden", function () {
     const input = "Und hier ist auch ein und."
     const res = funcs.aufgabe07(input)
-    assert.equal(res, true)
+    expect(res).toBe(true)
   })
   test("Sollte 'Und' nicht erkennen wenn es nicht am Satzanfang ist", function () {
     const input = "Hier ist ein falsches Und."
     const res = funcs.aufgabe07(input)
-    assert.equal(res, false)
+    expect(res).toBe(false)
   })
 })
 describe("Aufgabe 08", function () {
   test("Die Funktion 'aufgabe08()' soll existieren", function () {
-    assert.equal(typeof funcs.aufgabe08, "function")
+    expect(typeof funcs.aufgabe08).toBe("function")
   })
   test("Sollte 'e's mit '3' ersetzen", function () {
     const input = "e"
     const res = funcs.aufgabe08(input)
-    assert.equal(res, "3")
+    expect(res).toBe("3")
   })
   test("Sollte mehrere 'e's mit '3' ersetzen", function () {
     const input = "abcdeeefgh"
     const res = funcs.aufgabe08(input)
-    assert.equal(res, "abcd333fgh")
+    expect(res).toBe("abcd333fgh")
   })
   test("Sollte grosse 'E's nicht ersetzen", function () {
     const input = "ABCDEEEFGH"
     const res = funcs.aufgabe08(input)
-    assert.equal(res, "ABCDEEEFGH")
+    expect(res).toBe("ABCDEEEFGH")
   })
 })
 
