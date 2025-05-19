@@ -43,6 +43,7 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   padding-top: var(--header-height);
@@ -54,6 +55,7 @@ body {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+  height: 100vh;
 }
 
 #input-panel {
@@ -61,8 +63,22 @@ body {
   overflow-y: auto;
 }
 
+#resize-handle {
+  height: 8px;
+  background-color: var(--gruvbox-dark3);
+  cursor: row-resize;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+#resize-handle:hover {
+  background-color: var(--gruvbox-bright_orange);
+}
+
 #output {
-  padding: 0 0 0 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border: 1px solid var(--gruvbox-dark4);
   height: calc(var(--output-height) + var(--output-header-height));
   width: 100%;
@@ -81,7 +97,7 @@ body {
   font-size: var(--output-font-size);
   overflow-y: auto;
   height: calc(var(--output-height) - var(--output-header-height));
-  margin: 0;
+  margin: 0 0 0 20px;
   padding: 0;
 }
 

@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div id="input-panel">
+    <main id="input-panel">
       <h1>Aufgaben für Bedingungen und Schleifen</h1>
 
       <input
@@ -29,19 +29,23 @@
         <h2>Sortierverfahren</h2>
         <!-- TODO: Schreiben Sie hier zu Sortierverfahren-->
       </section>
-    </div>
+    </main>
 
-    <div id="output">
-      <div id="output-header">
-        <div class="ctrl-buttons">
-          <span class="btn" data-click="clearConsole">&#x1f5d1;</span>
-          <span class="btn" data-click="increaseFontSize">+</span>
-          <span class="btn" data-click="decreaseFontSize">-</span>
-          <span class="btn" data-click="increaseOutputHeight">&#x21A5;</span>
-          <span class="btn" data-click="decreaseOutputHeight">&#x21A7;</span>
+    <footer id="output">
+      <div id="resize-handle" title="Resize output panel"></div>
+
+      <div>
+        <div id="output-header">
+          <div class="ctrl-buttons">
+            <span class="btn" data-click="clearConsole">&#x1f5d1;</span>
+            <span class="btn" data-click="increaseFontSize">+</span>
+            <span class="btn" data-click="decreaseFontSize">-</span>
+            <span class="btn" data-click="increaseOutputHeight">&#x21A5;</span>
+            <span class="btn" data-click="decreaseOutputHeight">&#x21A7;</span>
+          </div>
         </div>
+        <div id="output-content">></div>
       </div>
-      <div id="output-content">></div>
-    </div>
+    </footer>
   </body>
 </html>
